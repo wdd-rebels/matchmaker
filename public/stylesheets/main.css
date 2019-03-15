@@ -16,6 +16,10 @@ section h3 {
   font-size: 32px;
 }
 
+section p {
+  text-align: center;
+}
+
 form  {
   display: flex;
   flex-direction: column;
