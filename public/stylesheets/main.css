@@ -1,8 +1,11 @@
 @import: "components/navbar.css";
 
+* {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
