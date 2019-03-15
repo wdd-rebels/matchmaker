@@ -3,9 +3,9 @@
     "name": "Arnie Dadrink",
     "email": "arniedadrink@gmail.com",
     "causes": [
-      "Animal",
-      "Environmental",
-      "Social"
+      "community",
+      "environment",
+      "socialjustice"
     ],
     "location": "London",
     "skills": [
@@ -23,14 +23,13 @@
     "name": "Elpha Bet",
     "email": "elphabet@gmail.com",
     "causes": [
-      "Arts & Culture",
-      "Social"
+      "youth",
+      "socialjustice"
     ],
     "location": "Nottingham",
     "skills": [
-      "html",
-      "css",
-      "javascript",
+      "web",
+      "wordpress",
       "python",
       "sql"
     ],
@@ -63,14 +62,14 @@
     "name": "Jason Jackson",
     "email": "jasonjackson@example.com",
     "causes": [
-      "Animal",
-      "Environmental"
+      "community",
+      "environment"
     ],
     "location": "Bristol",
     "skills": [
       "android",
       "ios",
-      "html"
+      "web"
     ],
     "qualifications": [
       "MBA"
@@ -83,17 +82,16 @@
     "name": "Ada Haskell",
     "email": "adahaskell@gmail.com",
     "causes": [
-      "Arts & Culture",
-      "Disaster Relief",
-      "Social"
+      "inclusion",
+      "youth",
+      "socialjustice"
     ],
     "location": "London",
     "skills": [
       "python",
       "sql",
-      "html",
-      "css",
-      "javascript",
+      "web",
+      "wordpress",
       "clojure"
     ],
     "qualifications": [
