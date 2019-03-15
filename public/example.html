@@ -1,9 +1,12 @@
 <html>
-<head>
-    <title></title>
-</head>
-<body>
-<script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matchmaker</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto:300" rel="stylesheet">
+  </head>
+  <body>
+  <script>
     fetch('/projects')
         .then(response => response.json())
         .then(data => {
@@ -11,6 +14,6 @@
         })
         .catch(error => console.error(error))
 
-</script>
-</body>
+  </script>
+  </body>
 </html>
