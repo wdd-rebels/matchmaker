@@ -1,6 +1,6 @@
 package controllers
 
-import dao.{CharityProjectDao, VolunteerDao}
+import dao.{CharityProjectDao, MatchingService, VolunteerDao}
 import javax.inject._
 import play.api.libs.json._
 import play.api.mvc._
@@ -10,7 +10,7 @@ import play.api.mvc._
   * application's home page.
   */
 @Singleton
-class HomeController @Inject()(cc: ControllerComponents, charityDao: CharityProjectDao, volunteerDao: VolunteerDao) extends AbstractController(cc) with Forms {
+class HomeController @Inject()(cc: ControllerComponents, charityDao: CharityProjectDao, volunteerDao: VolunteerDao, matchingService: MatchingService) extends AbstractController(cc) with Forms {
 
   def index() = Action(Redirect("/assets/pages/index.html"))
 
@@ -30,8 +30,9 @@ class HomeController @Inject()(cc: ControllerComponents, charityDao: CharityProj
   }
 
   def addVolunteer() = Action{ implicit req =>
-    volunteerForm.bindFromRequest().value.foreach(volunteerDao.add)
-    Ok("")
+    val volunteer = volunteerForm.bindFromRequest().value.get
+    volunteerDao.add(volunteer)
+    Ok(Json.toJson(matchingService.matchingCharities(volunteer)))
   }
 }
 

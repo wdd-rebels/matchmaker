@@ -3,21 +3,43 @@
 @import: "components/button.css";
 
 body {
-border: 0px;
-padding: 0px;
-margin: 0px;
-background-color: white;
-}
-
-* {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
   font-family: 'Libre Franklin', sans-serif;
-  background-color: #ffffff;
+  background-color: white;
 }
 
-form {
+section h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+form  {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #ffffff;
+  padding: 1rem 0;
+  margin: 0 auto;
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 25px;
+  margin-bottom: 3rem;
+}
+
+form label {
+  clear: both;
+  float: left;
+}
+
+form input,
+form textarea,
+form select {
+  clear: both;
+  float: right;
+  width: 220px;
 }
 
 .form-group {
@@ -28,4 +50,5 @@ form {
 button {
   border: none;
   padding: 1rem;
+  background-color: white;
 }
