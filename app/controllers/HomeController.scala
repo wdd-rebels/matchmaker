@@ -25,15 +25,19 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.index())
   }
 
-  case class Project(charity: String)
+  case class Charity(name: String, email: String, website: String, cause: String, location: String, tags: List[String], projects: List[Project])
+
+  case class Availability(typeOf: String)
+
+  case class Project(title: String, description: String, availability: Availability, tags: List[String])
 
   object Project {
     implicit val oformat = Json.format[Project]
   }
 
   val allProjects: List[Project] = List(
-    Project("test1"),
-    Project("test2")
+//    Project("test1", "description"),
+//    Project("test2", "description")
   )
 
   def projects() = Action{ implicit req =>
@@ -44,3 +48,4 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     )
   }
 }
+
