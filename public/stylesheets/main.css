@@ -1,6 +1,8 @@
+@import: "components/navbar.css";
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-} 
+}
+
