@@ -27,7 +27,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
 
   case class Charity(name: String, email: String, website: String, cause: String, location: String, tags: List[String], projects: List[Project])
 
-  case class Availability(typeOf: String)
+  case class Availability(`type`: String)
 
   case class Project(title: String, description: String, availability: Availability, tags: List[String])
 
@@ -47,5 +47,8 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
       )
     )
   }
+
+  case class Volunteer(name: String, email: String, causes: List[String], location: String, skills: List[String],
+                       qualifications: List[String], availability: Availability, experienceLevel: String, summary: String)
 }
 
