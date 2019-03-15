@@ -10,7 +10,7 @@
     fetch('/projects')
         .then(response => response.json())
         .then(data => {
-            document.body.innerHTML = JSON.stringify(data.map(function(project){return project.charity}))
+            document.body.innerHTML = JSON.stringify(data)
         })
         .catch(error => console.error(error))
 
