@@ -7,7 +7,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Libre Franklin', sans-serif;
 }
+
 .banner h1 {
   font-size: 50px;
   font-weight: bold;
