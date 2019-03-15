@@ -3,9 +3,14 @@
 # https://www.playframework.com/documentation/latest/ScalaRouting
 # ~~~~
 
-# An example controller showing a sample home page
 GET        /                              controllers.HomeController.index
+
 GET        /charities                     controllers.HomeController.charities
+GET        /volunteers                    controllers.HomeController.volunteers
+
+POST       /charities                     controllers.HomeController.addCharity
+POST       /volunteers                    controllers.HomeController.addVolunteer
+
 GET        /suggest/causes                controllers.HomeController.suggestedCauses
 GET        /suggest/skills                controllers.HomeController.suggestedSkills
 GET        /suggest/qualifications        controllers.HomeController.suggestedQualifications
