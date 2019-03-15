@@ -6,11 +6,11 @@ body {
 border: 0px;
 padding: 0px;
 margin: 0px;
-background-color: #35556d;
 }
 
 * {
   font-family: 'Libre Franklin', sans-serif;
+  background-color: #35556d;
 }
 
 form {
@@ -19,6 +19,12 @@ form {
   align-items: center;
 }
 
-/* .form-group {
+.form-group {
   padding: 0.3rem;
-} */
+  color: #faebd7;
+}
+
+button {
+  border: none;
+  padding: 1rem;
+}
