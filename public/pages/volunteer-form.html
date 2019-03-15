@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="/assets/stylesheets/main.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
@@ -13,7 +14,7 @@
       <h3>Register as a volunteer</h3>
     </section>
 
-    <form id="app" action="/volunteers" method="post" >
+    <form id="app" action="/volunteers" method="post" class="pure-form pure-form-aligned">
       <div class="form-group">
         <label class="" for="charity">Name</label>
         <input class="" type="text" name="charity" />
@@ -63,15 +64,17 @@
 
       <div class="form-group">
         <label class="" for="availability">Availability</label>
-        <input class="" type="" name="availability" />
+        <input class="" type="text" name="availability" />
       </div>
 
       <div class="form-group">
         <label class="" for="experienceLevel">Experience Level</label>
-        <input class="" type="" name="experienceLevel" />
+        <input class="" type="text" name="experienceLevel" />
       </div>
 
-      <button type="submit" name="button">Submit</button>
+      <button type="submit" name="button" id="find-cause">
+        <img src="/assets/images/Find_my_cause.jpg" width="20%" />
+      </button>
     </form>
 
     <script>
