@@ -1,8 +1,7 @@
 package controllers
 
-import dao.{CharityDao, VolunteerDao}
+import dao.{CharityProjectDao, VolunteerDao}
 import javax.inject._
-import model.{Availability, Charity, Project}
 import play.api.libs.json._
 import play.api.mvc._
 
@@ -11,7 +10,7 @@ import play.api.mvc._
   * application's home page.
   */
 @Singleton
-class HomeController @Inject()(cc: ControllerComponents, charityDao: CharityDao, volunteerDao: VolunteerDao) extends AbstractController(cc) {
+class HomeController @Inject()(cc: ControllerComponents, charityDao: CharityProjectDao, volunteerDao: VolunteerDao) extends AbstractController(cc) with Forms {
 
   def index() = Action(Redirect("/assets/pages/index.html"))
 
@@ -25,15 +24,14 @@ class HomeController @Inject()(cc: ControllerComponents, charityDao: CharityDao,
 
   def suggestedQualifications() = Action {Ok(Json.toJson(List("BA English")))}
 
-  case class Volunteer(name: String, email: String, causes: List[String], location: String, skills: List[String],
-                       qualifications: List[String], availability: Availability, experienceLevel: String, summary: String)
-
-  def addCharity() = Action{ req =>
-    Ok()
+  def addCharity() = Action{ implicit req =>
+    charityForm.bindFromRequest().value.foreach(charityDao.add)
+    Ok("")
   }
 
-  def addVolunteer() = Action{ req =>
-    Ok()
+  def addVolunteer() = Action{ implicit req =>
+    volunteerForm.bindFromRequest().value.foreach(volunteerDao.add)
+    Ok("")
   }
 }
 
