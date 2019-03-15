@@ -1,18 +1,17 @@
 package controllers
 
+import dao.CharityDao
 import javax.inject._
-import play.api._
+import model.{Availability, Project}
 import play.api.libs.json._
 import play.api.mvc._
-
-import scala.collection.immutable
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the
  * application's home page.
  */
 @Singleton
-class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
+class HomeController @Inject()(cc: ControllerComponents, projectDao: CharityDao) extends AbstractController(cc) {
 
   /**
    * Create an Action to render an HTML page.
@@ -25,15 +24,6 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.index())
   }
 
-  case class Charity(name: String, email: String, website: String, cause: String, location: String, tags: List[String], projects: List[Project])
-
-  case class Availability(`type`: String)
-
-  case class Project(title: String, description: String, availability: Availability, tags: List[String])
-
-  object Project {
-    implicit val oformat = Json.format[Project]
-  }
 
   val allProjects: List[Project] = List(
 //    Project("test1", "description"),
@@ -43,7 +33,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   def projects() = Action{ implicit req =>
     Ok(
       Json.toJson[List[Project]](
-        allProjects
+        projectDao.getCharities()
       )
     )
   }
