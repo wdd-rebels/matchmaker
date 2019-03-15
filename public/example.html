@@ -1,19 +1,65 @@
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Matchmaker</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto:300" rel="stylesheet">
-  </head>
-  <body>
-  <script>
-    fetch('/projects')
-        .then(response => response.json())
-        .then(data => {
-            document.body.innerHTML = JSON.stringify(data)
-        })
-        .catch(error => console.error(error))
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
 
-  </script>
-  </body>
+
+<div id="app">
+    <div id="app-4">
+        <select>
+            <option v-for="cause in causes" v-bind:value="cause">{{cause}}</option>
+        </select>
+
+        <select>
+            <option v-for="skill in skills" v-bind:value="skill">{{skill}}</option>
+        </select>
+
+        <select>
+            <option v-for="qualification in qualifications" v-bind:value="qualification">{{qualification}}</option>
+        </select>
+    </div>
+
+</div>
+
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            causes: [],
+            skills: [],
+            qualifications: []
+        },
+        mounted: function() {
+            var self = this;
+
+            fetch('/suggest/causes').then(res => res.json()).then(data => {
+                self.causes = data
+                self.$forceUpdate()
+            }).catch(error => console.error(error))
+
+            fetch('/suggest/skills').then(res => res.json()).then(data => {
+                self.skills = data
+                self.$forceUpdate()
+            }).catch(error => console.error(error))
+
+            fetch('/suggest/qualifications').then(res => res.json()).then(data => {
+                self.qualifications = data
+                self.$forceUpdate()
+            }).catch(error => console.error(error))
+
+
+        }
+    })
+
+
+</script>
+
+
+</body>
 </html>
