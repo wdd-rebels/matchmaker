@@ -2,7 +2,7 @@ package controllers
 
 import dao.CharityDao
 import javax.inject._
-import model.{Availability, Project}
+import model.{Availability, Charity, Project}
 import play.api.libs.json._
 import play.api.mvc._
 
@@ -11,7 +11,7 @@ import play.api.mvc._
   * application's home page.
   */
 @Singleton
-class HomeController @Inject()(cc: ControllerComponents, projectDao: CharityDao) extends AbstractController(cc) {
+class HomeController @Inject()(cc: ControllerComponents, charityDao: CharityDao) extends AbstractController(cc) {
 
   /**
     * Create an Action to render an HTML page.
@@ -30,11 +30,10 @@ class HomeController @Inject()(cc: ControllerComponents, projectDao: CharityDao)
     //    Project("test2", "description")
   )
 
-  def projects() = Action { implicit req =>
+  def charities() = Action { implicit req =>
     Ok(
-      Json.toJson[List[Project]](
-        //        projectDao.getCharities()
-        List(Project("test", "description", Availability("blah"), Nil))
+      Json.toJson[List[Charity]](
+        charityDao.getCharities()
       )
     )
   }

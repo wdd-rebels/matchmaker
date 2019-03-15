@@ -5,7 +5,7 @@
 
 # An example controller showing a sample home page
 GET        /                              controllers.HomeController.index
-GET        /projects                      controllers.HomeController.projects
+GET        /charities                     controllers.HomeController.charities
 GET        /suggest/causes                controllers.HomeController.suggestedCauses
 GET        /suggest/skills                controllers.HomeController.suggestedSkills
 GET        /suggest/qualifications        controllers.HomeController.suggestedQualifications
