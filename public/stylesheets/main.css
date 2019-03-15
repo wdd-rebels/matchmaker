@@ -3,11 +3,11 @@
 @import: "components/button.css";
 
 body {
-border: 0px;
-padding: 0px;
-margin: 0px;
-font-family: 'Libre Franklin', sans-serif;
-background-color: white;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Libre Franklin', sans-serif;
+  background-color: white;
 }
 
 section h3 {
@@ -26,6 +26,7 @@ form  {
   width: 40%;
   border: 1px solid black;
   border-radius: 25px;
+  margin-bottom: 3rem;
 }
 
 form label {
@@ -49,4 +50,5 @@ form select {
 button {
   border: none;
   padding: 1rem;
+  background-color: white;
 }
