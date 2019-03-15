@@ -6,17 +6,40 @@ body {
 border: 0px;
 padding: 0px;
 margin: 0px;
+background-color: #35556d;
+font-family: 'Libre Franklin', sans-serif;
 }
 
-* {
-  font-family: 'Libre Franklin', sans-serif;
-  background-color: #ffffff;
+section h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  color: #ffffff;
 }
 
-form {
+form  {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #ffffff;
+  padding: 1rem 0;
+  margin: 0 auto;
+  width: 40%;
+  border: 1px #ffffff solid;
+  border-radius: 25px;
+}
+
+form label {
+  clear: both;
+  float: left;
+}
+
+form input,
+form textarea,
+form select {
+  clear: both;
+  float: right;
+  width: 220px;
 }
 
 .form-group {
