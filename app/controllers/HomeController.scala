@@ -26,7 +26,7 @@ class HomeController @Inject()(cc: ControllerComponents, charityDao: CharityProj
 
   def addCharity() = Action{ implicit req =>
     charityForm.bindFromRequest().value.foreach(charityDao.add)
-    Ok("")
+    Ok(views.html.newCharityProject())
   }
 
   def addVolunteer() = Action{ implicit req =>
