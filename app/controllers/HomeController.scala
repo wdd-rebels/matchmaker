@@ -40,16 +40,27 @@ class HomeController @Inject()(cc: ControllerComponents, charityDao: CharityDao)
 
   def suggestedCauses() = Action {
     Ok {
-      Json.toJson(List(
-        "Animal", "Environmental", "Arts & Culture"
-      ))
+      Json.toJson {
+        val allCauses = for {
+          charity <- charityDao.getCharities()
+        } yield charity.cause
+
+        allCauses.distinct
+      }
     }
   }
 
   def suggestedSkills() = Action {
     Ok {
+      Json.toJson {
+        val allTags = for {
+          charity <- charityDao.getCharities()
+          project <- charity.projects
+          tag <- project.tags
+        } yield tag
 
-      Json.toJson(List("html", "css", "node.js"))
+        allTags.distinct
+      }
     }
   }
 
