@@ -6,15 +6,14 @@ body {
 border: 0px;
 padding: 0px;
 margin: 0px;
-background-color: #35556d;
 font-family: 'Libre Franklin', sans-serif;
+background-color: white;
 }
 
 section h3 {
   text-align: center;
   font-weight: bold;
   font-size: 32px;
-  color: #ffffff;
 }
 
 form  {
@@ -25,7 +24,7 @@ form  {
   padding: 1rem 0;
   margin: 0 auto;
   width: 40%;
-  border: 1px #ffffff solid;
+  border: 1px solid black;
   border-radius: 25px;
 }
 
