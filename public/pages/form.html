@@ -19,33 +19,52 @@
 
       <div className="form-group">
         <label className="" htmlFor="cause">Cause</label>
-        <input className="" type="" name="cause" />
+        <select className="" type="text" name="cause" >
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+        </select>
       </div>
 
       <div className="form-group">
         <label className="" htmlFor="location">Location</label>
-        <input className="" type="" name="location" />
+        <input className="" type="text" name="location" />
       </div>
 
       <div className="form-group">
         <label className="" htmlFor="project">Project</label>
-        <input className="" type="" name="project" />
+        <input className="" type="text" name="project" />
       </div>
 
       <div className="form-group">
-        <label className="" htmlFor="description">Description</label>
-        <textarea name="description" className="" type=""></textarea>
+        <label className="" htmlFor="summary">Summary</label>
+        <textarea name="summary" className="" type="text"></textarea>
       </div>
 
       <div className="form-group">
         <label className="" htmlFor="keywords">Keyword Tags</label>
-        <input className="" type="" name="keywords" />
+        <input className="" type="checkbox" name="keywords" />
+        <div>
+          <input type="checkbox" id="scales" name="scales">
+          <label for="scales">Scales</label>
+        </div>
       </div>
 
-      <!-- <div className="form-group">
-        <label className="" htmlFor=""></label>
-        <input className="" type="" name="" />
-      </div> -->
+      <div className="form-group">
+        <label className="" htmlFor="qualification">Qualification</label>
+        <input className="" type="" name="qualification" />
+      </div>
+
+      <div className="form-group">
+        <label className="" htmlFor="availability">Availability</label>
+        <input className="" type="" name="availability" />
+      </div>
+
+      <div className="form-group">
+        <label className="" htmlFor="experienceLevel">Experience Level</label>
+        <input className="" type="" name="experienceLevel" />
+      </div>
 
     </form>
 
