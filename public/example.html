@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    fetch('/projects')
+        .then(response => response.json())
+        .then(data => {
+            document.body.innerHTML = JSON.stringify(data.map(function(project){return project.charity}))
+        })
+        .catch(error => console.error(error))
+
+</script>
+</body>
+</html>
