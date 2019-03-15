@@ -9,10 +9,9 @@ import scala.io.Source
 class CharityProjectDao {
 
   private val charities: ListBuffer[CharityProject] = {
-//    val projectsRaw = Source.fromResource("charities.json").mkString
-//    val projectsJson = Json.parse(projectsRaw)
-//    projectsJson.validate[ListBuffer[CharityProject]].get
-    ListBuffer.empty
+    val projectsRaw = Source.fromResource("charities.json").mkString
+    val projectsJson = Json.parse(projectsRaw)
+    projectsJson.validate[ListBuffer[CharityProject]].get
   }
 
   def getCharities(): List[CharityProject] = {
