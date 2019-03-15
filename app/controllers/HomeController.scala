@@ -1,0 +1,46 @@
+package controllers
+
+import javax.inject._
+import play.api._
+import play.api.libs.json._
+import play.api.mvc._
+
+import scala.collection.immutable
+
+/**
+ * This controller creates an `Action` to handle HTTP requests to the
+ * application's home page.
+ */
+@Singleton
+class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
+
+  /**
+   * Create an Action to render an HTML page.
+   *
+   * The configuration in the `routes` file means that this method
+   * will be called when the application receives a `GET` request with
+   * a path of `/`.
+   */
+  def index() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.index())
+  }
+
+  case class Project(charity: String)
+
+  object Project {
+    implicit val oformat = Json.format[Project]
+  }
+
+  val allProjects: List[Project] = List(
+    Project("test1"),
+    Project("test2")
+  )
+
+  def projects() = Action{ implicit req =>
+    Ok(
+      Json.toJson[List[Project]](
+        allProjects
+      )
+    )
+  }
+}
