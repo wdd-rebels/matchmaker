@@ -9,7 +9,7 @@ import scala.io.Source
 
 class CharityDao {
 
-  private val charities: mutable.Seq[Charity] = {
+  private val charities: ListBuffer[Charity] = {
     val projectsRaw = Source.fromResource("charities.json").mkString
     val projectsJson = Json.parse(projectsRaw)
     projectsJson.validate[ListBuffer[Charity]].get
@@ -18,6 +18,11 @@ class CharityDao {
   def getCharities(): List[Charity] = {
     charities.toList
   }
+
+  def add(charity: Charity): Unit = {
+    charities.append(charity)
+  }
+
 
   def getSuggestedSkills(): List[String] = {
     val allTags = for {
