@@ -1,5 +1,4 @@
 [
-
   {
     "name": "London Village Network",
     "email": "charity@example.org",
@@ -35,6 +34,30 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Culpeper Community Garden",
+    "email": "gardenworker@gmail.com",
+    "website": "http://culpeper.org.uk/projinstall/",
+    "cause": "Environmental",
+    "location": "London",
+    "tags": [
+      "socialjustice",
+      "community",
+      "environment"
+    ],
+    "projects": [
+      {
+        "title": "Website redesign",
+        "description": "Improving and adding functionality to the Culpeper Community Garden website (donation button, online membership forms).",
+        "availability": {
+          "type": "On-going",
+        },
+        "tags": [
+          "web",
+          "wordpress"
+        ]
+      }
+    ]
   }
-
 ]
