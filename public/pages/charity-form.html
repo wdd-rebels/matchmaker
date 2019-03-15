@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="/assets/stylesheets/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
 
@@ -11,7 +12,7 @@
       <h3>Register a charity project</h3>
     </section>
 
-    <form>
+    <form id="app">
       <div className="form-group">
         <label className="" htmlFor="charity">Charity name</label>
         <input className="" type="text" name="charity" />
@@ -25,10 +26,7 @@
       <div className="form-group">
         <label className="" htmlFor="cause">Cause</label>
         <select className="" type="text" name="cause" >
-          <option>Animal</option>
-          <option>Environmental</option>
-          <option>Social</option>
-          <option></option>
+          <option v-for="cause in causes" v-bind:value="cause">{{cause}}</option>
         </select>
       </div>
 
@@ -72,6 +70,37 @@
       </div>
 
     </form>
+
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          causes: [],
+          skills: [],
+          qualifications: []
+        },
+        mounted: function() {
+          var self = this;
+
+          fetch('/suggest/causes').then(res => res.json()).then(data => {
+            self.causes = data
+            self.$forceUpdate()
+          }).catch(error => console.error(error))
+
+          fetch('/suggest/skills').then(res => res.json()).then(data => {
+            self.skills = data
+            self.$forceUpdate()
+          }).catch(error => console.error(error))
+
+          fetch('/suggest/qualifications').then(res => res.json()).then(data => {
+            self.qualifications = data
+            self.$forceUpdate()
+          }).catch(error => console.error(error))
+
+
+        }
+      })
+    </script>
 
   </body>
 </html>
