@@ -24,5 +24,16 @@
 }
 
 .button {
-
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: black;
+  transition: background 0.3s ease;
+}
+.button:hover {
+  opacity: 1;
+  background: black;
+  text-decoration: none;
+  color: white;
 }
