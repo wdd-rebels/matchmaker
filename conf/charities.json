@@ -18,15 +18,6 @@
     ]
   },
   {
-    "title": "Volunteer tracking system",
-    "description": "We have a foot in the door volunteer program. We would like to see how many hours volunteers have completed. PHP, iOS, Android.",
-    "availability": "On-going",
-    "skills": [
-      "ios",
-      "android"
-    ]
-  },
-  {
     "name": "London Village Network",
     "email": "charity@example.org",
     "website": "http://www.mycharity.org",
@@ -36,15 +27,6 @@
       "youth",
       "inclusion"
     ],
-    "title": "In-App Form",
-    "description": "Tracking development using a monitoring youth activity booklet. Implementing a youth activity booklet to track engagement between young people and volunteers and to demonstrate how each interaction raises their esteem. PHP, iOS, Android.",
-    "availability": "On-going",
-    "skills": [
-      "ios",
-      "android"
-    ]
-  },
-  {
     "title": "Volunteer tracking system",
     "description": "We have a foot in the door volunteer program. We would like to see how many hours volunteers have completed. PHP, iOS, Android.",
     "availability": "On-going",
@@ -66,11 +48,10 @@
     "title": "Website redesign",
     "description": "Improving and adding functionality to the Culpeper Community Garden website (donation button, online membership forms).",
     "availability": "On-going",
-    "causes": [
+    "skills": [
       "web",
       "wordpress"
     ]
   }
-]
-}
+
 ]
