@@ -13,61 +13,72 @@
     </section>
 
     <form id="app">
-      <div className="form-group">
-        <label className="" htmlFor="charity">Charity name</label>
-        <input className="" type="text" name="charity" />
+      <div class="form-group">
+        <label class="" for="charity">Charity name</label>
+        <input class="" type="text" name="charity" />
       </div>
 
-      <div className="form-group">
-        <label className="" htmlFor="email">Email</label>
-        <input className="" type="email" name="email" />
+      <div class="form-group">
+        <label class="" for="email">Email</label>
+        <input class="" type="email" name="email" />
       </div>
 
-      <div className="form-group">
-        <label className="" htmlFor="cause">Cause</label>
-        <select className="" type="text" name="cause" >
+      <div class="form-group">
+        <label class="" for="cause">Cause</label>
+        <select class="" type="text" name="cause" >
           <option v-for="cause in causes" v-bind:value="cause">{{cause}}</option>
         </select>
       </div>
 
-      <div className="form-group">
-        <label className="" htmlFor="location">Location</label>
-        <input className="" type="text" name="location" />
+      <div class="form-group">
+        <label class="" for="location">Location</label>
+        <input class="" type="text" name="location" />
       </div>
 
-      <div className="form-group">
-        <label className="" htmlFor="project">Project</label>
-        <input className="" type="text" name="project" />
+      <div class="form-group">
+        <label class="" for="project">Project</label>
+        <input class="" type="text" name="project" />
       </div>
 
-      <div className="form-group">
-        <label className="" htmlFor="summary">Summary</label>
-        <textarea name="summary" className="" type="text"></textarea>
+      <div class="form-group">
+        <label class="" for="summary">Summary</label>
+        <textarea name="summary" class="" type="text"></textarea>
       </div>
 
-      <div className="form-group">
-        <label className="" htmlFor="keywords">Keyword Tags</label>
-        <input className="" type="checkbox" name="keywords" />
+      <!-- <div class="form-group">
+        <label class="" for="keywords">Keyword Tags</label>
+        <input class="" type="checkbox" name="keywords" />
         <div>
           <input type="checkbox" id="scales" name="scales">
           <label for="scales">Scales</label>
         </div>
+      </div> -->
+
+      <div class="form-group">
+        <label>Skills</label>
+        <div v-for="skill in skills">
+          <label class="" for="keywords">{{skill}}</label>
+          <input class="" type="checkbox" name="keywords" v-bind:value="skill" />
+        </div>
       </div>
 
-      <div className="form-group">
-        <label className="" htmlFor="qualification">Qualification</label>
-        <input className="" type="" name="qualification" />
+      <div class="form-group">
+        <label class="" for="qualification">Qualification</label>
+        <select class="" type="text" name="qualification" >
+          <option v-for="qualification in qualifications" v-bind:value="qualification">{{qualification}}</option>
+        </select>
       </div>
 
-      <div className="form-group">
-        <label className="" htmlFor="availability">Availability</label>
-        <input className="" type="" name="availability" />
+      <div class="form-group">
+        <label class="" for="availability">Availability</label>
+        <input class="" type="" name="availability" />
       </div>
 
-      <div className="form-group">
-        <label className="" htmlFor="experienceLevel">Experience Level</label>
-        <input className="" type="" name="experienceLevel" />
+      <div class="form-group">
+        <label class="" for="experienceLevel">Experience Level</label>
+        <input class="" type="" name="experienceLevel" />
       </div>
+
 
     </form>
 
