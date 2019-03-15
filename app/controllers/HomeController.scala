@@ -30,9 +30,13 @@ class HomeController @Inject()(cc: ControllerComponents, charityDao: CharityProj
   }
 
   def addVolunteer() = Action{ implicit req =>
-    val volunteer = volunteerForm.bindFromRequest().value.get
+    val form = volunteerForm.bindFromRequest()
+    form.errors.foreach(println)
+    val volunteer = form.value.get
     volunteerDao.add(volunteer)
-    Ok(Json.toJson(matchingService.matchingCharities(volunteer)))
+    val matchingProjects = matchingService.matchingCharities(volunteer)
+    val matchesPage = views.html.matches(s"Matches for  ${volunteer.name}", matchingProjects)
+    Ok(matchesPage)
   }
 }
 
