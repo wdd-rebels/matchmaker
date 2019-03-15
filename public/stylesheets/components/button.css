@@ -1,5 +1,4 @@
-
-.button {
+/*.button-charity {
   color: white;
   padding: 10px 15px;
   border-radius: 4px;
@@ -7,9 +6,29 @@
   background: black;
   transition: background 0.3s ease;
 }
-.button {
+.button-charity:hover {
   opacity: 1;
   background: #3ac162;
   text-decoration: none;
   color: white;
+}
+
+.button-volunteer {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: black;
+  transition: background 0.3s ease;
+}
+.button-volunteer:hover {
+  opacity: 1;
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+}
+*/
+
+.img {
+  margin: 20px;
 }
