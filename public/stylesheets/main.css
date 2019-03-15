@@ -1,5 +1,6 @@
 @import: "components/navbar.css";
-@import: "components/banner.css;
+@import: "components/banner.css";
+@import: "components/button.css";
 
 body {
 border: 0px;
