@@ -34,5 +34,7 @@ Last, but not least, names of the proud contributors please!
 | :--- | :--- | :--- | :--- | :--- |
 | Sook Meng Muk | [mengmuk](https://github.com/mengmuk) | @ | - | - |
 | Margreet Dijsktra | [margreet1](https://github.com/margreet1) | @ | - | - |
+| Kayla | [username](url) | @ | - | - |
 | Greg Dorrell | [Grogs](https://github.com/Grogs) | @ | - | - |
-| Tereza Kinnert | member1 | @member1 | - | - |
+| Caroline | [username](url) | @ | - | - |
+| Tereza Kinnert | [terezakinnert](https://github.com/terezakinnert) | - | - | - |
