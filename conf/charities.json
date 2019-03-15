@@ -51,7 +51,7 @@
         "title": "Website redesign",
         "description": "Improving and adding functionality to the Culpeper Community Garden website (donation button, online membership forms).",
         "availability": {
-          "type": "On-going",
+          "type": "On-going"
         },
         "tags": [
           "web",

@@ -9,9 +9,6 @@ class CharityDao {
   def getCharities(): List[Charity] = {
     val projectsRaw = Source.fromResource("charities.json").mkString
     val projectsJson = Json.parse(projectsRaw)
-    println(projectsJson)
-    val res=projectsJson.validate[List[Charity]]
-    println(res)
-      res.get
+    projectsJson.validate[List[Charity]].get
   }
 }
