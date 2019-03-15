@@ -33,6 +33,6 @@ Last, but not least, names of the proud contributors please!
 | Name | GitHub | Twitter | LinkedIn | Other |
 | :--- | :--- | :--- | :--- | :--- |
 | Sook Meng Muk | [mengmuk](https://github.com/mengmuk) | @ | - | - |
-| Member 1 | [margreet1](https://github.com/margreet1) | @ | - | - |
+| Margreet Dijsktra | [margreet1](https://github.com/margreet1) | @ | - | - |
 | Greg Dorrell | [Grogs](https://github.com/Grogs) | @ | - | - |
-| Member 1 | member1 | @member1 | - | - |
+| Tereza Kinnert | member1 | @member1 | - | - |
