@@ -1,4 +1,12 @@
 @import: "components/navbar.css";
+@import: "components/banner.css;
+
+body {
+border: 0px;
+padding: 0px;
+margin: 0px;
+background-color: #35556d;
+}
 
 * {
   font-family: 'Libre Franklin', sans-serif;
